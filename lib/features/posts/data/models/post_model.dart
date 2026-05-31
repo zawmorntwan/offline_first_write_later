@@ -12,10 +12,13 @@ abstract class PostModel with _$PostModel {
     required String title,
     required String body,
     required int userId,
-    @Default(1) int isSynced, // 1 for true, 0 for false in SQLite
+    @JsonKey(name: 'is_synced')
+    @Default(1)
+    int isSynced, // 1 for true, 0 for false in SQLite
   }) = _PostModel;
 
-  factory PostModel.fromJson(Map<String, dynamic> json) => _$PostModelFromJson(json);
+  factory PostModel.fromJson(Map<String, dynamic> json) =>
+      _$PostModelFromJson(json);
 
   const PostModel._();
 

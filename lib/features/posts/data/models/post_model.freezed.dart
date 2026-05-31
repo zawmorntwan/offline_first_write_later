@@ -15,7 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$PostModel {
 
- int get id; String get title; String get body; int get userId; int get isSynced;
+ int get id; String get title; String get body; int get userId;@JsonKey(name: 'is_synced') int get isSynced;
 /// Create a copy of PostModel
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -48,7 +48,7 @@ abstract mixin class $PostModelCopyWith<$Res>  {
   factory $PostModelCopyWith(PostModel value, $Res Function(PostModel) _then) = _$PostModelCopyWithImpl;
 @useResult
 $Res call({
- int id, String title, String body, int userId, int isSynced
+ int id, String title, String body, int userId,@JsonKey(name: 'is_synced') int isSynced
 });
 
 
@@ -157,7 +157,7 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int id,  String title,  String body,  int userId,  int isSynced)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int id,  String title,  String body,  int userId, @JsonKey(name: 'is_synced')  int isSynced)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _PostModel() when $default != null:
 return $default(_that.id,_that.title,_that.body,_that.userId,_that.isSynced);case _:
@@ -178,7 +178,7 @@ return $default(_that.id,_that.title,_that.body,_that.userId,_that.isSynced);cas
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int id,  String title,  String body,  int userId,  int isSynced)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int id,  String title,  String body,  int userId, @JsonKey(name: 'is_synced')  int isSynced)  $default,) {final _that = this;
 switch (_that) {
 case _PostModel():
 return $default(_that.id,_that.title,_that.body,_that.userId,_that.isSynced);case _:
@@ -198,7 +198,7 @@ return $default(_that.id,_that.title,_that.body,_that.userId,_that.isSynced);cas
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int id,  String title,  String body,  int userId,  int isSynced)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int id,  String title,  String body,  int userId, @JsonKey(name: 'is_synced')  int isSynced)?  $default,) {final _that = this;
 switch (_that) {
 case _PostModel() when $default != null:
 return $default(_that.id,_that.title,_that.body,_that.userId,_that.isSynced);case _:
@@ -213,14 +213,14 @@ return $default(_that.id,_that.title,_that.body,_that.userId,_that.isSynced);cas
 @JsonSerializable()
 
 class _PostModel extends PostModel {
-  const _PostModel({required this.id, required this.title, required this.body, required this.userId, this.isSynced = 1}): super._();
+  const _PostModel({required this.id, required this.title, required this.body, required this.userId, @JsonKey(name: 'is_synced') this.isSynced = 1}): super._();
   factory _PostModel.fromJson(Map<String, dynamic> json) => _$PostModelFromJson(json);
 
 @override final  int id;
 @override final  String title;
 @override final  String body;
 @override final  int userId;
-@override@JsonKey() final  int isSynced;
+@override@JsonKey(name: 'is_synced') final  int isSynced;
 
 /// Create a copy of PostModel
 /// with the given fields replaced by the non-null parameter values.
@@ -255,7 +255,7 @@ abstract mixin class _$PostModelCopyWith<$Res> implements $PostModelCopyWith<$Re
   factory _$PostModelCopyWith(_PostModel value, $Res Function(_PostModel) _then) = __$PostModelCopyWithImpl;
 @override @useResult
 $Res call({
- int id, String title, String body, int userId, int isSynced
+ int id, String title, String body, int userId,@JsonKey(name: 'is_synced') int isSynced
 });
 
 

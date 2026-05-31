@@ -11,7 +11,7 @@ _PostModel _$PostModelFromJson(Map<String, dynamic> json) => _PostModel(
   title: json['title'] as String,
   body: json['body'] as String,
   userId: (json['userId'] as num).toInt(),
-  isSynced: (json['isSynced'] as num?)?.toInt() ?? 1,
+  isSynced: (json['is_synced'] as num?)?.toInt() ?? 1,
 );
 
 Map<String, dynamic> _$PostModelToJson(_PostModel instance) =>
@@ -20,5 +20,5 @@ Map<String, dynamic> _$PostModelToJson(_PostModel instance) =>
       'title': instance.title,
       'body': instance.body,
       'userId': instance.userId,
-      'isSynced': instance.isSynced,
+      'is_synced': instance.isSynced,
     };
