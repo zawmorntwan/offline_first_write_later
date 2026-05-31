@@ -15,15 +15,15 @@ final localeControllerProvider = LocaleControllerProvider._();
 final class LocaleControllerProvider
     extends $NotifierProvider<LocaleController, AppLocale> {
   LocaleControllerProvider._()
-      : super(
-          from: null,
-          argument: null,
-          retry: null,
-          name: r'localeControllerProvider',
-          isAutoDispose: true,
-          dependencies: null,
-          $allTransitiveDependencies: null,
-        );
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'localeControllerProvider',
+        isAutoDispose: true,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
 
   @override
   String debugGetCreateSourceHash() => _$localeControllerHash();
@@ -49,8 +49,14 @@ abstract class _$LocaleController extends $Notifier<AppLocale> {
   @override
   void runBuild() {
     final ref = this.ref as $Ref<AppLocale, AppLocale>;
-    final element = ref.element as $ClassProviderElement<
-        AnyNotifier<AppLocale, AppLocale>, AppLocale, Object?, Object?>;
+    final element =
+        ref.element
+            as $ClassProviderElement<
+              AnyNotifier<AppLocale, AppLocale>,
+              AppLocale,
+              Object?,
+              Object?
+            >;
     element.handleCreate(ref, build);
   }
 }

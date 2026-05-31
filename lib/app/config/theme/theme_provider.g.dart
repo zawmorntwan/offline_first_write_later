@@ -15,15 +15,15 @@ final themeControllerProvider = ThemeControllerProvider._();
 final class ThemeControllerProvider
     extends $NotifierProvider<ThemeController, ThemeMode> {
   ThemeControllerProvider._()
-      : super(
-          from: null,
-          argument: null,
-          retry: null,
-          name: r'themeControllerProvider',
-          isAutoDispose: true,
-          dependencies: null,
-          $allTransitiveDependencies: null,
-        );
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'themeControllerProvider',
+        isAutoDispose: true,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
 
   @override
   String debugGetCreateSourceHash() => _$themeControllerHash();
@@ -49,8 +49,14 @@ abstract class _$ThemeController extends $Notifier<ThemeMode> {
   @override
   void runBuild() {
     final ref = this.ref as $Ref<ThemeMode, ThemeMode>;
-    final element = ref.element as $ClassProviderElement<
-        AnyNotifier<ThemeMode, ThemeMode>, ThemeMode, Object?, Object?>;
+    final element =
+        ref.element
+            as $ClassProviderElement<
+              AnyNotifier<ThemeMode, ThemeMode>,
+              ThemeMode,
+              Object?,
+              Object?
+            >;
     element.handleCreate(ref, build);
   }
 }

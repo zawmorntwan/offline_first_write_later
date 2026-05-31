@@ -3,6 +3,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../features/home/presentation/screens/home_screen.dart';
+import '../../features/posts/presentation/screens/add_post_screen.dart';
+import '../../features/posts/presentation/screens/post_list_screen.dart';
 import '../../features/profile/presentation/screens/profile_screen.dart';
 import '../../shared/main_wrapper_screen.dart';
 import 'route_names.dart';
@@ -46,6 +48,16 @@ final appRouterProvider = Provider<GoRouter>((ref) {
             ],
           ),
         ],
+      ),
+      GoRoute(
+        path: RouteNames.postsPath,
+        name: RouteNames.postsName,
+        builder: (context, state) => const PostListScreen(),
+      ),
+      GoRoute(
+        path: RouteNames.addPostPath,
+        name: RouteNames.addPostName,
+        builder: (context, state) => const AddPostScreen(),
       ),
     ],
   );

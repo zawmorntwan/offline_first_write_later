@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../../../app/config/localization/generated/translations.g.dart';
 import '../../../../app/config/localization/locale_provider.dart';
@@ -53,7 +54,14 @@ class HomeScreen extends ConsumerWidget {
                   child: Text(
                     t.setting.changeLanguage,
                   ),
-                )
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    // Navigate to Offline-First Posts Screen
+                    context.push('/posts');
+                  },
+                  child: const Text('Write Later (Offline-First)'),
+                ),
               ],
             ),
           ],
